@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Calculate your grades after an assignment.">
+
 		<title>Upshot</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:700,700i|Inconsolata" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="./css/styles.css"/>
 	</head>
 
 	<body>
-		<img src= Logo.png alt="Upshot Logo">
-		<h1>upshot</h1>
-		<h4>Calculate your grade after an assignment</h4>
-		<h2>Category 1</h2>c
-		<input type="text" placeholder="Weight %">
-		<input type="text" placeholder="Current Points">
-		<input type="text" placeholder="Possible Points">
-		<button>Add Category</button>
-		<button>Calculate</button>
+		<div class="container">
+			<div class="header">
+				<img id="logo" src="./img/logo.png" alt="Upshot Logo"/>
+				<h1>upshot</h1>
+				<p>calculate your grade after an assignment</p>
+			</div>
+
+			<div id="assignment" class="category">
+				<h2>ASSIGNMENT</h2>
+				<input id="assignment-category" type="number" placeholder="category"/>
+				<input id="assignment-points" type="number" placeholder="projected points"/>
+				<input id="assignment-total" type="number" placeholder="total possible points"/>
+			</div>
+
+			<div id="categories"></div>
+
+			<div class="submit">
+				<button id="add">ADD CATEGORY</button>
+				<button id="calculate">CALCULATE</button>
+			</div>
+
+			<h1 id="result"></h1>
+		</div>
+		<script src="./js/scripts.js"></script>
 	</body>
 </html>
