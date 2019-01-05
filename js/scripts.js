@@ -72,12 +72,12 @@ function calculate() {
 		var weight = parseInt(category.inputWeight.value) / 100;
 
 		if (category.position + 1 === parseInt(assignmentCategory.value)) {
-			num += parseInt(assignmentPoints.value) * weight;
-			dem += parseInt(assignmentTotal.value) * weight;
+			num += parseInt(assignmentPoints.value) / parseInt(assignmentTotal.value) * weight;
+			dem += weight;
 		}
 
-		num += parseInt(category.inputCurrentPoints.value) * weight;
-		dem += parseInt(category.inputTotalPoints.value) * weight;
+		num += parseInt(category.inputCurrentPoints.value) / parseInt(category.inputTotalPoints.value) * weight;
+		dem += weight;
 	}
 
 	return num / dem;
